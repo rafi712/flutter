@@ -5,160 +5,218 @@ import 'package:flutter/material.dart';
 
 void main() => runApp(MyApp());
 
-class MyApp extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
-        appBar: AppBar(
-          title: Text('Card'),
-        ),
-        body: Container(
-          padding: EdgeInsets.all(15),
-          child: ListView(
-            children: [
-              // buildCard(Icons.contact_mail, 'Contact List', Colors.orange[300]),
-              // buildCard(Icons.settings, 'Setting', Colors.grey),
-              buildCard(Icons.image, 'Gallery', Colors.blue),
-              buildCard2(),
-              buildCard3(),
-              // Row(
-              //   children: [
-              //     Flexible(child: buildCard4(), flex: 1,),
-              //     Flexible(child: buildCard4(), flex: 1,),
-              //   ],
-              // ),
-            ],
-          ),
-        ),
-      ),
-    );
-  }
 
-  Card buildCard4() {
-    return Card(
-      clipBehavior: Clip.antiAlias,
-      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(24)),
-      child: Container(
-        child: Column(
-          children: [
-            Icon(
-              Icons.restaurant_menu_outlined,
-              color: Colors.grey,
-            ),
-            Text(
-              'Our Menu',
-              textAlign: TextAlign.center,
-              style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600),
-            )
-          ],
-        ),
-      ),
-    );
-  }
 
-  Card buildCard3() {
-    return Card(
-        clipBehavior: Clip.antiAlias,
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(24),
-        ),
-        child: Column(
-          children: [
-            Stack(
-              children: [
-                Ink.image(
-                  image:
-                      NetworkImage('https://picsum.photos/id/1011/5472/3648'),
-                  height: 240,
-                  fit: BoxFit.cover,
-                  child: InkWell(
-                    onTap: () {},
-                  ),
-                ),
-                Positioned(
-                  bottom: 16,
-                  right: 16,
-                  left: 16,
-                  child: Text(
-                    'Card with Image',
-                    style: TextStyle(
-                        fontWeight: FontWeight.bold,
-                        color: Colors.white,
-                        fontSize: 24),
-                  ),
-                )
-              ],
-            ),
-            Padding(
-              padding: const EdgeInsets.all(16.0).copyWith(bottom: 0),
-              child: Text(
-                'lorem ipsu sldkjsd sdsaufk  dkjsiir s ksdjfsidfjslkj lorem ipsu sldkjsd sdsaufk  dkjsiir s ksdjfsidfjslkj klsdjfk kj ksdjk ks kj jsdkj f',
-                style: TextStyle(fontSize: 16),
-              ),
-            ),
-            ButtonBar(
-              alignment: MainAxisAlignment.start,
-              children: [
-                TextButton(onPressed: () {}, child: Text('My Journey')),
-                TextButton(onPressed: () {}, child: Text('My Journey')),
-              ],
-            )
-          ],
-        ));
-  }
+// class MyApp extends StatelessWidget {
+//   @override
+//   Widget build(BuildContext context) {
+//     return MaterialApp(
+//       home: Scaffold(
+//         appBar: AppBar(
+//           title: Text('Card'),
+//         ),
+//         body: Container(
+//           padding: EdgeInsets.all(15),
+//           child: ListView(
+//             children: [
+//               buildCard(Icons.contact_mail, 'Contact List', Colors.orange[300]),
+//               buildCard(Icons.settings, 'Setting', Colors.grey),
+//               buildCard(Icons.image, 'Gallery', Colors.blue),
+//               buildCard2(),
+//               buildCard3(),
+//               buildCard5(),
+//               Row(
+//                 children: [
+//                   Flexible(                    
+//                     fit: FlexFit.loose,
+//                     child: Container(
+//                       width: double.infinity,
+//                       child: buildCard4(),
+//                     ),
+//                   ),
+//                   // Flexible(                    
+//                   //   fit: FlexFit.loose,
+//                   //   child: Container(
+//                   //     width: double.infinity,
+//                   //     child: buildCard4(),
+//                   //   ),
+//                   // ),
+//                 ],
+//               ),
+//             ],
+//           ),
+//         ),
+//       ),
+//     );
+//   }
 
-  Card buildCard2() {
-    return Card(
-        clipBehavior: Clip.antiAlias,
-        shape:
-            RoundedRectangleBorder(borderRadius: BorderRadius.circular(24.0)),
-        elevation: 3,
-        child: Stack(
-          alignment: Alignment.center,
-          children: [
-            Ink.image(
-              image: NetworkImage(
-                  'https://picsum.photos/id/0/5616/3744?grayscale'),
-              height: 240,
-              fit: BoxFit.cover,
-              child: InkWell(
-                onTap: () {},
-              ),
-            ),
-            Text(
-              'Card with Image',
-              style: TextStyle(
-                  fontWeight: FontWeight.bold,
-                  color: Colors.white,
-                  fontSize: 24),
-            )
-          ],
-        ));
-  }
+//   Card buildCard5() {
+//     return Card(
+//       shape: RoundedRectangleBorder(
+//         borderRadius: BorderRadius.circular(24)
+//       ),
+//       child: Container(
+//         padding: EdgeInsets.all(20.0),
+//         child: Column(
+//           children: [
+//             Text(
+//               'Hello World Project With Flutter and card implementation',
+//               style: TextStyle(
+//                 fontSize: 20.0,
+//               ),
+//             ),
+//             Text(
+//               'Rafi Akmal',
+//               style: TextStyle(
+//                 fontSize: 16.0,
+//                 color: Colors.grey[400],
+//               ),
+//             ),
+//           ],
+//         ),
+//       ),
+//     );
+//   }
 
-  Card buildCard(IconData icondata, String text, Color color) {
-    return Card(
-      elevation: 5,
-      child: Padding(
-        padding: const EdgeInsets.all(4.0),
-        child: Row(
-          children: [
-            Container(
-              // width: double.maxFinite,
-              margin: EdgeInsets.all(7),
-              child: Icon(
-                icondata,
-                color: color,
-              ),
-            ),
-            Text(text)
-          ],
-        ),
-      ),
-    );
-  }
-}
+//   Card buildCard4() {
+//     return Card(
+//       clipBehavior: Clip.antiAlias,
+//       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(24)),
+//       child: Container(
+//         child: Column(
+//           children: [
+//             Container(
+//               margin: EdgeInsets.all(10).copyWith(top: 15),
+//               child: Icon(
+//                 Icons.restaurant_menu_outlined,
+//                 color: Colors.grey,
+//                 size: 35.0,
+//               ),
+//             ),
+//             Padding(
+//               padding: const EdgeInsets.all(13.0).copyWith(bottom: 7.0),
+//               child: Text(
+//                 'Our Menu',
+//                 textAlign: TextAlign.center,
+//                 style: TextStyle(fontSize: 23, fontWeight: FontWeight.w600),
+//               ),
+//             ),
+//             Padding(
+//               padding: const EdgeInsets.all(13).copyWith(top: 0),
+//               child: Text(
+//                 'We serve some kind of juices with the best quality fruits and also we have best food in this town',
+//                 textAlign: TextAlign.center,
+//               ),
+//             )
+//           ],
+//         ),
+//       ),
+//     );
+//   }
+
+//   Card buildCard3() {
+//     return Card(
+//         clipBehavior: Clip.antiAlias,
+//         shape: RoundedRectangleBorder(
+//           borderRadius: BorderRadius.circular(24),
+//         ),
+//         child: Column(
+//           children: [
+//             Stack(
+//               children: [
+//                 Ink.image(
+//                   image:
+//                       NetworkImage('https://picsum.photos/id/1011/5472/3648'),
+//                   height: 240,
+//                   fit: BoxFit.cover,
+//                   // child: InkWell(
+//                   //   onTap: () {},
+//                   // ),
+//                 ),
+//                 Positioned(
+//                   bottom: 16,
+//                   right: 16,
+//                   left: 16,
+//                   child: Text(
+//                     'Card with Image',
+//                     style: TextStyle(
+//                         fontWeight: FontWeight.bold,
+//                         color: Colors.white,
+//                         fontSize: 24),
+//                   ),
+//                 )
+//               ],
+//             ),
+//             Padding(
+//               padding: const EdgeInsets.all(16.0).copyWith(bottom: 0),
+//               child: Text(
+//                 'lorem ipsu sldkjsd sdsaufk  dkjsiir s ksdjfsidfjslkj lorem ipsu sldkjsd sdsaufk  dkjsiir s ksdjfsidfjslkj klsdjfk kj ksdjk ks kj jsdkj f',
+//                 style: TextStyle(fontSize: 16),
+//               ),
+//             ),
+//             ButtonBar(
+//               alignment: MainAxisAlignment.start,
+//               children: [
+//                 TextButton(onPressed: () {}, child: Text('My Journey')),
+//                 TextButton(onPressed: () {}, child: Text('My Journey')),
+//               ],
+//             )
+//           ],
+//         ));
+//   }
+
+//   Card buildCard2() {
+//     return Card(
+//         clipBehavior: Clip.antiAlias,
+//         shape:
+//             RoundedRectangleBorder(borderRadius: BorderRadius.circular(24.0)),
+//         elevation: 3,
+//         child: Stack(
+//           alignment: Alignment.center,
+//           children: [
+//             Ink.image(
+//               image: NetworkImage(
+//                   'https://picsum.photos/id/0/5616/3744?grayscale'),
+//               height: 240,
+//               fit: BoxFit.cover,
+//               child: InkWell(
+//                 onTap: () {},
+//               ),
+//             ),
+//             Text(
+//               'Card with Image',
+//               style: TextStyle(
+//                   fontWeight: FontWeight.bold,
+//                   color: Colors.white,
+//                   fontSize: 24),
+//             )
+//           ],
+//         ));
+//   }
+
+//   Card buildCard(IconData icondata, String text, Color color) {
+//     return Card(
+//       elevation: 5,
+//       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+//       child: Padding(
+//         padding: const EdgeInsets.all(4.0),
+//         child: Row(
+//           children: [
+//             Container(
+//               // width: double.maxFinite,
+//               margin: EdgeInsets.all(7),
+//               child: Icon(
+//                 icondata,
+//                 color: color,
+//               ),
+//             ),
+//             Text(text)
+//           ],
+//         ),
+//       ),
+//     );
+//   }
+// }
 
 // ===================
 // Gradation Appbar
